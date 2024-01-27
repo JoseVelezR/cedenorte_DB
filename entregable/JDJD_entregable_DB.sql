@@ -1,41 +1,41 @@
-CREATE DATABASE olaquehace;
+CREATE DATABASE IF NOT EXISTS olaquehace;
 
 USE olaquehace;
 
-
-
-CREATE TABLE "Usuarios" (
-	"Nombre" TEXT DEFAULT 'ola',
-	"Apellido" TEXT,
-	"Edad" INTEGER
+CREATE TABLE Usuarios (
+    ID INT PRIMARY KEY,
+    Nombre TEXT DEFAULT 'ola',
+    Apellido TEXT,
+    Edad INTEGER
 );
 
 
 
+INSERT INTO Usuarios (ID, Nombre, Apellido, Edad)
+VALUES  (1, 'Juan', 'Jaramillo', 21),
+        (2, 'David', 'Duque', 21),
+        (3, 'OLA', 'QUEHACE', 99),
+        (4, '', 'ola', 30);
 
-INSERT INTO Usuarios (Nombre,Apellido,Edad) 
-VALUES	('Juan','Jaramillo',21),
-	('David','Duque',21),
-	('OLA','QUEHACE',99),
-	('','ola',30);
-	
+
 
 SELECT * FROM Usuarios;
 
 
 
-
-
-CREATE TABLE "SSH" (
-	"User" TEXT,
-	"Pass" TEXT
+CREATE TABLE SSH (
+    ID INT PRIMARY KEY,
+    User TEXT,
+    Pass TEXT,
+    FOREIGN KEY (ID) REFERENCES Usuarios(ID)
 );
 
 
 
-INSERT INTO SSH (User,Pass) VALUES 
-	('ola','321'),
-	('Khe','Hace');
+INSERT INTO SSH (ID, User, Pass)
+VALUES
+    (1, 'ola', '321'),
+    (2, 'Khe', 'Hace');
 
 SELECT * FROM SSH;
 
